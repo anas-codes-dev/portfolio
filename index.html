@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anas | Frontend Developer</title>
+
+  <!-- Theme Settings -->
   <script>
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark');
@@ -11,13 +13,35 @@
       document.documentElement.classList.remove('dark');
     }
   </script>
+
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Animated Text CSS -->
+  <style>
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    .typewriter {
+      overflow: hidden;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      width: 100%;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+    }
+  </style>
 </head>
+
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition duration-500">
+  <!-- Header -->
   <header class="bg-blue-600 dark:bg-gray-800 text-white py-8 shadow-lg">
     <div class="container mx-auto text-center">
       <h1 class="text-4xl font-bold">Muhammad Anas</h1>
-      <p class="text-lg mt-2">Frontend Developer | MSCS Student</p>
+      <p class="text-lg mt-2 typewriter">Frontend Developer | MSCS Student</p>
       <nav class="mt-4">
         <a href="#about" class="mx-2 hover:underline">About</a>
         <a href="#skills" class="mx-2 hover:underline">Skills</a>
@@ -30,12 +54,15 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main class="container mx-auto px-4 py-10 space-y-10">
+    <!-- About -->
     <section id="about">
       <h2 class="text-2xl font-bold mb-4">About Me</h2>
       <p>I am a frontend developer skilled in HTML, CSS, JavaScript, and React.js. I enjoy creating clean and responsive websites. Currently pursuing MSCS and learning modern web technologies.</p>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
       <h2 class="text-2xl font-bold mb-4">Skills</h2>
       <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 list-disc pl-5">
@@ -48,6 +75,7 @@
       </ul>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
       <h2 class="text-2xl font-bold mb-4">Projects</h2>
       <div class="grid md:grid-cols-2 gap-6">
@@ -62,6 +90,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <h2 class="text-2xl font-bold mb-4">Contact</h2>
       <p>Email: anas.email@example.com</p>
@@ -70,10 +99,12 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-800 text-white py-4 text-center">
     <p>&copy; 2025 Muhammad Anas. All rights reserved.</p>
   </footer>
 
+  <!-- Toggle Dark Mode Script -->
   <script>
     function toggleTheme() {
       const html = document.documentElement;
