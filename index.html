@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anas | Frontend Developer</title>
 
-  <!-- Theme Settings -->
+  <!-- Theme Setup Script -->
   <script>
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    });
   </script>
 
   <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-  <!-- Animated Text CSS -->
+  <!-- Typing Animation -->
   <style>
     @keyframes typing {
       from { width: 0 }
@@ -104,16 +107,16 @@
     <p>&copy; 2025 Muhammad Anas. All rights reserved.</p>
   </footer>
 
-  <!-- Toggle Dark Mode Script -->
+  <!-- Toggle Script -->
   <script>
     function toggleTheme() {
       const html = document.documentElement;
-      if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
+      if (html.classList.contains("dark")) {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
       } else {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
+        html.classList.add("dark");
+        localStorage.setItem("theme", "dark");
       }
     }
   </script>
