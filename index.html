@@ -1,88 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammad Anas | Frontend Developer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
+  <title>Anas | Frontend Developer</title>
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .project {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1.5rem;
-    }
-    footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Muhammad Anas</h1>
-    <p>Frontend Developer | MSCS Student</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition duration-500">
+  <header class="bg-blue-600 dark:bg-gray-800 text-white py-8 shadow-lg">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Muhammad Anas</h1>
+      <p class="text-lg mt-2">Frontend Developer | MSCS Student</p>
+      <nav class="mt-4">
+        <a href="#about" class="mx-2 hover:underline">About</a>
+        <a href="#skills" class="mx-2 hover:underline">Skills</a>
+        <a href="#projects" class="mx-2 hover:underline">Projects</a>
+        <a href="#contact" class="mx-2 hover:underline">Contact</a>
+        <button onclick="toggleTheme()" class="ml-4 px-3 py-1 bg-white dark:bg-gray-700 text-black dark:text-white rounded shadow hover:bg-gray-200 dark:hover:bg-gray-600">
+          Toggle Theme
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a frontend developer skilled in HTML, CSS, JavaScript, and React.js. Currently pursuing MSCS, I love building responsive and clean web interfaces.</p>
-  </section>
+  <main class="container mx-auto px-4 py-10 space-y-10">
+    <section id="about">
+      <h2 class="text-2xl font-bold mb-4">About Me</h2>
+      <p>I am a frontend developer skilled in HTML, CSS, JavaScript, and React.js. I enjoy creating clean and responsive websites. Currently pursuing MSCS and learning modern web technologies.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Personal Portfolio</h3>
-      <p>A responsive website showcasing my work, skills, and contact details.</p>
-    </div>
-    <div class="project">
-      <h3>To-Do App</h3>
-      <p>A JavaScript app to manage daily tasks with localStorage support.</p>
-    </div>
-  </section>
+    <section id="skills">
+      <h2 class="text-2xl font-bold mb-4">Skills</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 list-disc pl-5">
+        <li>HTML5</li>
+        <li>CSS3 / Tailwind CSS</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: anas.email@example.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/anas-khan-27035022b/" target="_blank">anas-khan</a></p>
-    <p>GitHub: <a href="https://github.com/anas-codes-dev" target="_blank">anas-codes-dev</a></p>
-  </section>
+    <section id="projects">
+      <h2 class="text-2xl font-bold mb-4">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-5">
+          <h3 class="font-semibold text-xl mb-2">Portfolio Website</h3>
+          <p>A personal portfolio website showcasing my projects, skills, and contact info. Built with HTML and Tailwind CSS.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-5">
+          <h3 class="font-semibold text-xl mb-2">To-Do App</h3>
+          <p>A simple task manager app using JavaScript and localStorage to manage daily tasks efficiently.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
+    <section id="contact">
+      <h2 class="text-2xl font-bold mb-4">Contact</h2>
+      <p>Email: anas.email@example.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/anas-khan-27035022b/" class="text-blue-400 underline">anas-khan</a></p>
+      <p>GitHub: <a href="https://github.com/anas-codes-dev" class="text-blue-400 underline">anas-codes-dev</a></p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-4 text-center">
     <p>&copy; 2025 Muhammad Anas. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+  </script>
 </body>
 </html>
